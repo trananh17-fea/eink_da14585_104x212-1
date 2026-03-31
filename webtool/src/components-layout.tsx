@@ -98,7 +98,7 @@ function TopBar(props: TopBarProps) {
           <span className="flag-icon">
             <FlagIcon locale={isVi ? "vi" : "en"} />
           </span>
-          <strong>{isVi ? "Vn" : "En"}</strong>
+          <strong>{isVi ? "vn" : "en"}</strong>
         </button>
         <ThemeToggle theme={theme} toggleTheme={onThemeToggle} />
       </div>

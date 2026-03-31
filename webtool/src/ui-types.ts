@@ -32,6 +32,7 @@ type HeroSectionProps = {
 type ScreenControlPanelProps = {
   locale: LocaleMode;
   connected: boolean;
+  connecting: boolean;
   currentTime: string;
   deviceName: string;
   bluetoothAvailable: boolean;

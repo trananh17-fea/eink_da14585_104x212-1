@@ -147,10 +147,20 @@ function ScreenControlPanel(props: ScreenControlPanelProps) {
           <div className="ble-console-actions">
             <button
               className="primary-button"
-              disabled={props.connected}
+              disabled={props.connected || props.connecting}
               onClick={props.onConnect}
             >
-              {isVi ? "Kết nối" : "Connect"}
+              {props.connected
+                ? isVi
+                  ? "Đã kết nối"
+                  : "Connected"
+                : props.connecting
+                  ? isVi
+                    ? "Đang kết nối..."
+                    : "Connecting..."
+                  : isVi
+                    ? "Kết nối"
+                    : "Connect"}
             </button>
             <button
               className="ghost-button"

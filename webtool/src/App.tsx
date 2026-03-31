@@ -356,6 +356,7 @@ function App() {
   );
   const [deviceName, setDeviceName] = useState("Chưa kết nối");
   const [connected, setConnected] = useState(false);
+  const [connecting, setConnecting] = useState(false);
   const [statusLines, setStatusLines] = useState<string[]>([
     "Hệ thống sẵn sàng.",
   ]);
@@ -877,6 +878,7 @@ function App() {
                 <ScreenControlPanel
                   locale={locale}
                   connected={connected}
+                  connecting={connecting}
                   currentTime={currentTime}
                   deviceName={deviceName}
                   bluetoothAvailable={bluetoothAvailable}
